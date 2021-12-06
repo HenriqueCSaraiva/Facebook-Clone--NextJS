@@ -15,7 +15,10 @@ import SidebarRow from "./SidebarRow";
 function Sidebar() {
   return (
     <div className="mt-5 p-2 max-w-[600px] xl:min-w-[300px]">
-      <SidebarRow src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Golden-eyed_tree_frog_%28Agalychnis_annae%29.jpg/500px-Golden-eyed_tree_frog_%28Agalychnis_annae%29.jpg" title="UserName"/>
+      <SidebarRow
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Golden-eyed_tree_frog_%28Agalychnis_annae%29.jpg/500px-Golden-eyed_tree_frog_%28Agalychnis_annae%29.jpg"
+        title="UserName"
+      />
       <SidebarRow Icon={UsersIcon} title="Friends" />
       <SidebarRow Icon={UserGroupIcon} title="Groups" />
       <SidebarRow Icon={ShoppingBagIcon} title="Marketplace" />

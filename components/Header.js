@@ -14,8 +14,11 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import HeaderIcon from "./HeaderIcon";
+import { useAppValue } from "../StateProvider";
 
 function Header() {
+  const [{ user }, dispatch] = useAppValue();
+
   return (
     <div className="bg-white flex items-center p-2 shadow-md sticky top-0 z-50 lg:px-5">
       {/*Left*/}
@@ -49,11 +52,21 @@ function Header() {
 
       {/*Right*/}
       <div className="flex items-center justify-end sm:space-x-2">
-        <p className="font-semibold pr-3 whitespace-nowrap">User Name</p>
-        <ViewGridIcon className="bg-gray-200 cursor-pointer h-10 hidden p-2 rounded-full text-gray-70 xl:inline-flex w-10 hover:bg-gray-300" />
-        <ChatIcon className="bg-gray-200 cursor-pointer h-10 hidden p-2 rounded-full text-gray-70 xl:inline-flex w-10 hover:bg-gray-300"/>
-        <BellIcon className="bg-gray-200 cursor-pointer h-10 hidden p-2 rounded-full text-gray-70 xl:inline-flex w-10 hover:bg-gray-300"/>
-        <ChevronDownIcon className="bg-gray-200 cursor-pointer h-10 hidden p-2 rounded-full text-gray-70 xl:inline-flex w-10 hover:bg-gray-300"/>
+        <Image
+          className="cursor-pointer rounded-full"
+          src={user.photoURL}
+          width={40}
+          height={40}
+          layout="fixed"
+        />
+
+        <p className="font-semibold pr-3 whitespace-nowrap">
+          {user.displayName}
+        </p>
+        <ViewGridIcon className="icon" />
+        <ChatIcon className="icon" />
+        <BellIcon className="icon" />
+        <ChevronDownIcon className="icon" />
       </div>
     </div>
   );

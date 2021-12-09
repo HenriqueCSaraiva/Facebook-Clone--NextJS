@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
-    "next": "^12.0.5-canary.19",
+    "firebase": "^9.6.0",
+    "next": "^12.0.7",
     "next-auth": "^4.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"

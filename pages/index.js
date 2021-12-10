@@ -4,8 +4,10 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Login from "../components/Login";
 import { useAppValue } from "../StateProvider";
+import Widgets from "../components/Widgets";
+import { db } from "../firebase";
 
-export default function Home() {
+export default function Home({posts}) {
   const [{ user }, dispatch] = useAppValue();
 
   return (
@@ -21,7 +23,8 @@ export default function Home() {
           <Header />
           <main className="flex">
             <Sidebar />
-            <Feed />
+            <Feed posts={posts}/>
+            <Widgets />
           </main>
         </>
       )}

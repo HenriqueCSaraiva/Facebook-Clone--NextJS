@@ -16,11 +16,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 
-const app = !firebase.apps.length
-  ? firebase.initializeApp(firebaseConfig)
-  : firebase.app();
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
-const db = app.firestore();
+const db = firebase.firestore();
 const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 const storage = firebase.storage();

@@ -32,7 +32,7 @@ function Header() {
         <div className="bg-gray-100 flex items-center ml-2 p-2 rounded-full ">
           <SearchIcon className="h-6 text-gray-600" />
           <input
-            className="bg-transparent flex flex-shrink hidden items-center ml-2 outline-none placeholder-gray-500 md:inline-flex"
+            className="bg-transparent sm:flex flex-shrink hidden items-center ml-2 outline-none placeholder-gray-500 md:inline-flex"
             type="text"
             placeholder="Search Facebook"
           />
@@ -60,7 +60,7 @@ function Header() {
           layout="fixed"
         />
 
-        <p className="font-semibold pr-3 whitespace-nowrap">
+        <p className="hidden font-semibold pr-3 whitespace-nowrap lg:inline-flex">
           {user.displayName}
         </p>
         <ViewGridIcon className="icon" />

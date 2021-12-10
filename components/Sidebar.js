@@ -17,7 +17,7 @@ function Sidebar() {
   const [{ user }, dispatch] = useAppValue();
 
   return (
-    <div className="mt-5 p-2 max-w-[600px] xl:min-w-[300px]">
+    <div className="hidden sm:flex flex-col mt-5 sm:p-2 max-w-[600px] xl:min-w-[300px]">
       <SidebarRow src={user.photoURL} title={user.displayName} />
       <SidebarRow Icon={UsersIcon} title="Friends" />
       <SidebarRow Icon={UserGroupIcon} title="Groups" />

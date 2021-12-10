@@ -11,7 +11,7 @@ function SidebarRow({ src, Icon, title }) {
           layout="fixed"
         />
       )}
-      {Icon && <Icon className="h-8 text-blue-500 w-8" />}
+      {Icon && <Icon className="h-6 sm:h-8 text-blue-500 w-8" />}
         <p className="hidden sm:inline-flex font-medium">{title}</p>
     </div>
   );

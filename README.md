@@ -9,14 +9,9 @@
 
 </div>
 
-<br>
+## Access the app on Vercel
 
-## Access the app on Firebase Hosting 🔥🔥
-https://disney-clone-4ed3a.web.app/
-
-https://disney-clone-4ed3a.firebaseapp.com/
-
-<br>
+https://facebook-nextjs-alpha.vercel.app/
 
 ##
 
